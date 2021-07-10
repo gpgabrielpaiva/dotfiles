@@ -1,5 +1,5 @@
 # Access as root
-sudo -u
+sudo su
 
 sudo snap install brave
 sudo snap install darktable
@@ -7,14 +7,15 @@ sudo snap install slack --classic
 sudo snap install spotify
 sudo snap install telegram-desktop
 sudo snap install discord
-sudo snap install htop
-sudo snap install mqtt-explorer
-sudo snap install okular
 sudo snap install postman
 sudo snap install skype --classic
 sudo snap install gnome-clocks
 sudo snap install gitkraken
 sudo snap install vscode
+sudo snap install obs-studio
+sudo snap install tela-icons
+
+
 
 # theme
 sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/home:Horst3180.list"
