@@ -30,6 +30,9 @@ sudo sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy ma
 sudo apt-get update
 sudo apt-get install charles-proxy
 
+# Install Flatpak
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
