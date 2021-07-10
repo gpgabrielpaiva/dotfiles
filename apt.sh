@@ -30,6 +30,11 @@ sudo sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy ma
 sudo apt-get update
 sudo apt-get install charles-proxy
 
+# Install qBittorrent
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo apt-get update
+sudo apt-get install qbittorrent
+
 # Install Flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
