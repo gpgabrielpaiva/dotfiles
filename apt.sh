@@ -1,10 +1,10 @@
 # Access as root
-sudo -u
+sudo su
 
-apt-get update
+sudo apt update && sudo apt upgrade -y
 
 # install tools
-sudo apt-get install \
+sudo apt install \
    curl \
    coreutils \
    net-tools \
@@ -30,13 +30,6 @@ sudo apt-get install \
 # install stacer monitor repository
 # sudo add-apt-repository ppa:oguzhaninan/stacer
 
-# install enpass repository
-echo "deb http://repo.sinew.in/ stable main" > sudo tee /etc/apt/sources.list.d/enpass.list
-wget -O - https://dl.sinew.in/keys/enpass-linux.key | apt-key add -
-
-# install peek (screnshoot gif) repository
-sudo add-apt-repository ppa:peek-developers/stable
-
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -51,20 +44,18 @@ sudo add-apt-repository \
    stable"
 
 sudo apt remove cmdtest
-sudo apt-get update
+sudo apt update
 
-sudo apt-get install -y \
+sudo apt install -y \
    git \
-   sublime-text \
-   shutter \
-   peek \
-   enpass \
+   vlc \
+   flameshot \
    snapd
 
 # docker
 apt-get install docker-ce -y
 groupadd docker
-usermod -aG docker germano
+usermod -aG docker paiva
 
 systemctl enable docker
 systemctl disable docker
@@ -75,8 +66,8 @@ docker-compose --version
 
 docker run hello-world
 
-chown germano:germano /home/germano/.docker -R
-chmod g+rwx "/home/germano/.docker" -R
+chown paiva:paiva /home/paiva/.docker -R
+chmod g+rwx "/home/paiva/.docker" -R
 
 # ctop
 sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64 -O /usr/local/bin/ctop
