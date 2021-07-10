@@ -5,7 +5,9 @@
 # ref: https://gist.github.com/keeferrourke/d29bf364bd292c78cf774a5c37a791db
 
 # dependancies: fonts-cantarell, ttf-ubuntu-font-family, git
-sudo apt-get install fonts-cantarell, ttf-ubuntu-font-family, git
+sudo apt install fonts-cantarell
+sudo apt install ttf-ubuntu-font-family
+sudo apt install git
 srcdir="/tmp/google-fonts"
 pkgdir="/usr/share/fonts/truetype/google-fonts"
 giturl="git://github.com/google/fonts.git"
