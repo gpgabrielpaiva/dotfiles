@@ -24,11 +24,12 @@ sudo apt install \
    psensor \
    -y
 
-# install cafeine repository
-# sudo add-apt-repository ppa:caffeine-developers/ppa
+# Install Charles Proxy
+wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add -
+sudo sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy main > /etc/apt/sources.list.d/charles.list'
+sudo apt-get update
+sudo apt-get install charles-proxy
 
-# install stacer monitor repository
-# sudo add-apt-repository ppa:oguzhaninan/stacer
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
